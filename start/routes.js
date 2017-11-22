@@ -16,3 +16,9 @@
 const Route = use('Route')
 
 Route.on('/').render('home')
+
+Route.get('/hello', () => 'Hello World!')
+
+Route.get('/hello2', function() {
+    return 'Hello World2!';
+})
