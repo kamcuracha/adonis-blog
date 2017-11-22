@@ -17,14 +17,16 @@ const Route = use('Route')
 
 Route.on('/').render('home')
 
-Route.get('/hello', () => 'Hello World!')
+Route.get('/posts', 'PostController.index')
 
-Route.get('/hello2', function() {
-    return 'Hello World2!';
-})
+// Route.get('/hello', () => 'Hello World!')
 
-Route.get('/hello/:id', ({ params }) => `Hello ${params.id}!`)
+// Route.get('/hello2', function() {
+//     return 'Hello World2!';
+// })
 
-Route.get('/hello2/:id', function({ params }) {
-    return `Hello ${params.id}2!`;
-})
+// Route.get('/hello/:id', ({ params }) => `Hello ${params.id}!`)
+
+// Route.get('/hello2/:id', function({ params }) {
+//     return `Hello ${params.id}2!`;
+// })
