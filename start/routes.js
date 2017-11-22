@@ -22,3 +22,9 @@ Route.get('/hello', () => 'Hello World!')
 Route.get('/hello2', function() {
     return 'Hello World2!';
 })
+
+Route.get('/hello/:id', ({ params }) => `Hello ${params.id}!`)
+
+Route.get('/hello2/:id', function({ params }) {
+    return `Hello ${params.id}2!`;
+})
