@@ -23,6 +23,7 @@ Route.get('/posts/edit/:id', 'PostController.edit')
 Route.get('/posts/:id', 'PostController.details')
 Route.post('/posts', 'PostController.create')
 Route.put('/posts/:id', 'PostController.update')
+Route.delete('/posts/:id', 'PostController.delete')
 
 // Route.get('/hello', () => 'Hello World!')
 
