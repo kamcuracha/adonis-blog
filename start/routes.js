@@ -19,6 +19,8 @@ Route.on('/').render('home')
 
 Route.get('/posts', 'PostController.index')
 
+Route.get('/posts/:id', 'PostController.details')
+
 // Route.get('/hello', () => 'Hello World!')
 
 // Route.get('/hello2', function() {
