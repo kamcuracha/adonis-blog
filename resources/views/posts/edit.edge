@@ -3,17 +3,17 @@
 @section('content')
     <a href="/posts">Back</a>
     <hr>
-    <h1>Add Post</h1>
-    <form action="/posts" method="POST">
+    <h1>Edit Post</h1>
+    <form action="{{ '/posts/' + post.id + '?_method=PUT' }}" method="POST">
         {{ csrfField() }}
         <div class="form-group">
             <label for="postTitle">Title</label>
-            <input name="title" type="text" class="form-control" id="postTitle" placeholder="Title" value="{{ old('title', '') }}">
+            <input name="title" type="text" class="form-control" id="postTitle" placeholder="Title" value="{{ post.title }}">
             {{ elIf('<span class="text-danger">$self</span>', getErrorFor('title'), hasErrorFor('title')) }}
         </div>
         <div class="form-group">
             <label for="postBody">Body</label>
-            <textarea name="body" rows="5" class="form-control" id="postBody" placeholder="Body">{{ old('body', '') }}</textarea>
+            <textarea name="body" rows="5" class="form-control" id="postBody" placeholder="Body">{{ post.body }}</textarea>
             {{ elIf('<span class="text-danger">$self</span>', getErrorFor('body'), hasErrorFor('body')) }}
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>

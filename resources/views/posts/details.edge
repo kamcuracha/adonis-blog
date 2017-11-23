@@ -3,6 +3,8 @@
 @section('content')
     <a href="/posts">Back</a>
     <hr>
-    <h1>{{post.title}}</h1>
-    <p>{{post.body}}</p>
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.body }}</p>
+    <hr>
+    <a href="/posts/edit/{{ post.id }}" class="btn btn-dark">Edit</a>
 @endsection

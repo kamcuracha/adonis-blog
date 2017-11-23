@@ -19,8 +19,10 @@ Route.on('/').render('home')
 
 Route.get('/posts', 'PostController.index')
 Route.get('/posts/add', 'PostController.add')
+Route.get('/posts/edit/:id', 'PostController.edit')
 Route.get('/posts/:id', 'PostController.details')
 Route.post('/posts', 'PostController.create')
+Route.put('/posts/:id', 'PostController.update')
 
 // Route.get('/hello', () => 'Hello World!')
 
